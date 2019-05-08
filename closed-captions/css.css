@@ -5,6 +5,28 @@ Show them when they receive the class 'on'
 Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
+
+body{
+	background-color: black;
+	/* margin: 0;
+	padding: 0; */
+}
+
+p {
+	color: white;
+	font-family: "Brenner Sans Condensed";
+	font-style: normal;
+	font-weight: 600;
+	/* text-align: center; */
+}
+
+.container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+}
+
 #closed-captions p {
 	opacity: 0;
 	transition: .05s;
@@ -22,9 +44,9 @@ Feel free to adjust the defaults to your needs.
 }
 
 /* **********************************************
-The first paragraph, with extended timing for 
+The first paragraph, with extended timing for
 	all siblings. Basically what it does is that
-	it shows the text after a delay, which 
+	it shows the text after a delay, which
 	corresponds with the time that the word is
 	spoken.
 You probably want to change the styling.
@@ -32,6 +54,7 @@ You probably want to change the styling.
 .p0 span {
 	opacity: 0;
 	font-family: brenner;
+	/* font-family: "Open Sans"; */
 }
 .p0.on span:first-of-type {
 	opacity: 1;

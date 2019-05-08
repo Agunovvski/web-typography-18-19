@@ -2,12 +2,12 @@ var player;
 
 function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
-		width: 600,
-		height: 400,
-		videoId: 'vrP-_T-h9YM',
+		width: 560,
+		height: 315,
+		videoId: 'TcMBFSGVi1c',
 		playerVars: {
 			color: 'white'
-			//autoplay: '1'
+			// autoplay: '1'
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 		},
 		events: {
@@ -59,7 +59,7 @@ function updateTimerDisplay(){
 			updateTimerDisplay();
 		}, 100);
 	}
-	
+
 }
 function pTimes(num,startT,endT,curT) {
 	var curP = document.querySelector('.p' + num);
@@ -135,4 +135,3 @@ function sTimes(num,soundStarts,curT) {
 		};
 	}
 })();
-
