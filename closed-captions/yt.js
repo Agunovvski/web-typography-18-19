@@ -7,6 +7,10 @@ function onYouTubeIframeAPIReady() {
 		videoId: 'osSJhXruEzU',
 		playerVars: {
 			color: 'white',
+			controls: 0,
+			iv_load_policy: 3,
+			rel: 0,
+			modestbranding: 1,
 			// autoplay: '1'
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 			start: 0,
