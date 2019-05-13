@@ -6,6 +6,8 @@ Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
 
+
+
 body{
 	background-color: black;
 	/* margin: 0;
@@ -133,3 +135,28 @@ You probably want to change the styling.
 	transition: 0s 3.7s;
 	/* font-family: "brenner slab"; */
 }
+
+.p0.on {
+
+}
+
+.moon {
+	background-color: green;
+}
+
+
+#video-placeholder {
+	transition: all 2s ease-in-out;
+	opacity: 1;
+}
+
+.hide {
+	opacity: 0;
+}
+
+
+/* video styling */
+
+
+
+/* end */
