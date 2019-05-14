@@ -1,3 +1,10 @@
+/* .p2.on::after {content: url}*/
+
+/* #closed-captons .p2.off {opacity: 1} (overschrijven)
+		#closed-captons .p2.off span {opacity: 0} (spannentjes verdwijnen)
+		.p2.off::after {opacity: 0; transition: 0 2s(na 2seconden)} (spannentjes verdwijnen)
+*/
+
 /* **********************************************
 Basic mechanics
 Hide all paragraphs by default
@@ -6,12 +13,14 @@ Hide them when they receive the class 'off'
 Feel free to adjust the defaults to your needs.
 ********************************************** */
 
-
+* {
+	margin: 0;
+	padding: 0;
+}
 
 body{
 	background-color: black;
-	/* margin: 0;
-	padding: 0; */
+	padding: 4rem;
 }
 
 p {
@@ -23,6 +32,21 @@ p {
 	margin-right: auto; */
 	/* left: 0;
 	right: 0; */
+}
+
+.panels {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+}
+
+.panels div {
+	/* width: 30vw; */
+	height: 10rem;
+	background-color: white;
+	/* margin: 1rem; */
 }
 
 .thanos {
@@ -136,23 +160,152 @@ You probably want to change the styling.
 	/* font-family: "brenner slab"; */
 }
 
-.p0.on {
 
+
+/* panels */
+
+.panels div {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 275px;
+	align-self: center;
 }
+
+.panels div:nth-child(1) {
+	background-image: url("./stills/still1.png");
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
+.panels div:nth-child(2) {
+	background-image: url("./stills/still2.png");
+	grid-column-start: 3;
+	grid-column-end: 5;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
+.panels div:nth-child(3) {
+	background-image: url("./stills/still3.png");
+	grid-column-start: 5;
+	grid-column-end: 7;
+	grid-row-start: 1;
+	grid-row-end: 1;
+}
+
+.panels div:nth-child(4) {
+	background-image: url("./stills/still4.png");
+	grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+	grid-row-end: 2;
+}
+
+.panels #video-placeholder-2 {
+	grid-column-start: 4;
+	grid-column-end: 6;
+	grid-row-start: 2;
+	grid-row-end: 2;
+}
+
+.panels div:nth-child(6) {
+	background-image: url("./stills/still28.png");
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 3;
+}
+
+.panels div:nth-child(7) {
+	background-image: url("./stills/still29.png");
+	background-position: top right;
+	grid-column-start: 2;
+	grid-column-end: 5;
+	grid-row-start: 4;
+	grid-row-end: 4;
+}
+
+.panels div:nth-child(8) {
+	background-image: url("./stills/still30.png");
+	grid-column-start: 4;
+	grid-column-end: 7;
+	grid-row-start: 5;
+	grid-row-end: 5;
+}
+
+.panels #video-placeholder-3 {
+	grid-column-start: 2;
+	grid-column-end: 6;
+	grid-row-start: 6;
+	grid-row-end: 6;
+}
+
+.panels div:nth-child(10) {
+	background-image: url("./stills/still58.png");
+	grid-column-start: 4;
+	grid-column-end: 5;
+	grid-row-start: 7;
+	grid-row-end: 7;
+}
+
+.panels div:nth-child(11) {
+	background-image: url("./stills/still60.png");
+	grid-column-start: 5;
+	grid-column-end: 7;
+	grid-row-start: 7;
+	grid-row-end: 7;
+}
+
+.panels div:nth-child(12) {
+	background-image: url("./stills/still65.png");
+	background-attachment:fixed;
+	grid-column-start: 1;
+	grid-column-end: 7;
+	grid-row-start: 8;
+	grid-row-end: 8;
+}
+
+.panels div:nth-child(13) {
+	background-image: url("./stills/still64.png");
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 9;
+	grid-row-end: 9;
+}
+
+.panels div:nth-child(14) {
+	background-image: url("./stills/still66.png");
+	grid-column-start: 4;
+	grid-column-end: 7;
+	grid-row-start: 9;
+	grid-row-end: 9;
+}
+
+
+/* end panels */
 
 .moon {
 	background-color: green;
 }
 
 
+
+
 #video-placeholder {
-	transition: all 2s ease-in-out;
 	opacity: 1;
 }
 
-.hide {
+#video-placeholder-hidden {
 	opacity: 0;
 }
+
+#video-placeholder-2, #video-placeholder-3 {
+	width: 100%;
+}
+
 
 
 /* video styling */
