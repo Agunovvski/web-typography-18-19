@@ -64,10 +64,14 @@ p {
 	justify-content: center;
 }
 
+#closed-captions {
+	display: grid;
+}
+
 #closed-captions p {
 	opacity: 0;
 	transition: .05s;
-	position: absolute;
+	/* position: absolute; */
 	text-align: center;
   margin: auto;
   left: 0;
@@ -164,12 +168,24 @@ You probably want to change the styling.
 
 /* panels */
 
+.reveal {
+	animation: reveal 2s ease forwards;
+}
+
+@keyframes reveal {
+	to {
+		opacity: 1;
+	}
+}
+
 .panels div {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 275px;
 	align-self: center;
+	/* opacity: 0; */
+	/* transition: opacity 2s ease forwards; */
 }
 
 .panels div:nth-child(1) {

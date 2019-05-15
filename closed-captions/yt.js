@@ -56,6 +56,7 @@ function onYouTubeIframeAPIReady() {
 			iv_load_policy: 3,
 			rel: 0,
 			modestbranding: 1,
+			mute: 1,
 			// autoplay: '1',
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 			start: 18,
@@ -63,7 +64,7 @@ function onYouTubeIframeAPIReady() {
 		},
 		events: {
 			onReady: initialize,
-			onStateChange: onPlayerStateChange
+			onStateChange: onPlayerStateChange2
 		}
 	});
 	player3 = new YT.Player('video-placeholder-3', {
@@ -76,14 +77,15 @@ function onYouTubeIframeAPIReady() {
 			iv_load_policy: 3,
 			rel: 0,
 			modestbranding: 1,
+			mute: 1,
 			// autoplay: '1',
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
-			start: 52,
+			start: 54,
 			end: 82
 		},
 		events: {
 			onReady: initialize,
-			onStateChange: onPlayerStateChange
+			// onStateChange: onPlayerStateChange2
 		}
 	});
 }
@@ -93,6 +95,12 @@ function onPlayerStateChange(event) {
             player2.playVideo();
 
         }
+    }
+
+function onPlayerStateChange2(event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            player3.playVideo();
+       	}
     }
 
 
@@ -138,7 +146,7 @@ function updateTimerDisplay(){
 		i++;
 	}
 
-	if ( t < 136.1) {
+	if ( t < 142) {
 		setTimeout(() => {
 			updateTimerDisplay();
 		}, 100);
