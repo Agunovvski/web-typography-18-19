@@ -37,6 +37,7 @@ function onYouTubeIframeAPIReady() {
 			rel: 0,
 			modestbranding: 1,
 			autoplay: '1',
+			mute: 1,
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 			start: 0,
 			end: 18
@@ -93,14 +94,15 @@ function onYouTubeIframeAPIReady() {
 function onPlayerStateChange(event) {
         if (event.data == YT.PlayerState.ENDED) {
             player2.playVideo();
-
         }
+				// player2.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
     }
 
 function onPlayerStateChange2(event) {
         if (event.data == YT.PlayerState.ENDED) {
             player3.playVideo();
        	}
+				// player3.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
     }
 
 
@@ -118,10 +120,12 @@ function addSpans(){
 	var regex = /\S+/g;
 	while ( i < ps.length ) {
 		var str = ps[i].innerText;
+		// var createContainer = document.createElement('div');
 		var result = str.replace(regex, function(a) {
 			return "<span>" + a + "</span>";
 		});
 		ps[i].innerHTML = result;
+		// ps[i].appendChild(createContainer);
 		ps[i].classList.add('p' + i);
 		i++;
 	}
@@ -163,6 +167,7 @@ function pTimes(num,startT,endT,curT) {
 	}
 	if( curT > startT && !curP.classList.contains('on')) {
 		curP.classList.add('on');
+		curP.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 	}
 	if( curT < startT && curP.classList.contains('on')) {
 		curP.classList.remove('on');
