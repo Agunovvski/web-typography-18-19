@@ -32,6 +32,9 @@ p {
 	margin-right: auto; */
 	/* left: 0;
 	right: 0; */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
 }
 
 .panels {
@@ -85,6 +88,10 @@ p {
 	transition: .2s;
 	opacity: 0;
 }
+
+
+
+
 
 
 
@@ -146,20 +153,20 @@ p {
 
 #closed-captions .p-container:nth-child(9) {
 	grid-column-start: 1;
-	grid-column-end: 4;
+	grid-column-end: 5;
 	grid-row-start: 5;
 	grid-row-end: 5;
 }
 
 #closed-captions .p-container:nth-child(10) {
 	grid-column-start: 2;
-	grid-column-end: 5;
+	grid-column-end: 6;
 	grid-row-start: 6;
 	grid-row-end: 6;
 }
 
 #closed-captions .p-container:nth-child(11) {
-	grid-column-start: 4;
+	grid-column-start: 3;
 	grid-column-end: 7;
 	grid-row-start: 7;
 	grid-row-end: 7;
@@ -211,7 +218,7 @@ p {
 #closed-captions .p-container p:nth-child(1)::before {
 	background-size: cover;
 	background-position: center;
-  display: block;
+  display: inline-block;
   width: 100%;
   height: 275px;
   content:"";
@@ -291,6 +298,16 @@ The first paragraph, with extended timing for
 	spoken.
 You probably want to change the styling.
 ********************************************** */
+
+span {
+	margin: 1rem .1rem;
+}
+
+span:first-of-type {
+	margin-left: 1rem;
+}
+
+
 .p0 span {
 	opacity: 0;
 	/* font-family: brenner; */

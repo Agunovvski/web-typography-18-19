@@ -91,24 +91,28 @@ function onYouTubeIframeAPIReady() {
 	});
 }
 
+
+
+
 function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.ENDED) {
-            player2.playVideo();
-        }
-				// player2.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-    }
+	if (event.data == YT.PlayerState.ENDED) {
+			player2.playVideo();
+	}
+		// player2.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+}
 
 function onPlayerStateChange2(event) {
-        if (event.data == YT.PlayerState.ENDED) {
-            player3.playVideo();
-       	}
-				// player3.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-    }
+    if (event.data == YT.PlayerState.ENDED) {
+        player3.playVideo();
+   	}
+		// player3.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+}
 
 
-function onPlayerReady(event) {
-        event.target.playVideo();
-      }
+
+// function onPlayerReady(event) {
+//         event.target.playVideo();
+//       }
 
 function initialize(){
 	// Update the controls on load
