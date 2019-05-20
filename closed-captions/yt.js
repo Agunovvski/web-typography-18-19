@@ -1,5 +1,4 @@
 var player;
-
 var hiddenPlayer;
 var player2;
 var player3;
@@ -86,7 +85,7 @@ function onYouTubeIframeAPIReady() {
 		},
 		events: {
 			onReady: initialize,
-			// onStateChange: onPlayerStateChange2
+
 		}
 	});
 }
@@ -98,21 +97,16 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.ENDED) {
 			player2.playVideo();
 	}
-		// player2.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 }
 
 function onPlayerStateChange2(event) {
     if (event.data == YT.PlayerState.ENDED) {
         player3.playVideo();
    	}
-		// player3.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 }
 
 
 
-// function onPlayerReady(event) {
-//         event.target.playVideo();
-//       }
 
 function initialize(){
 	// Update the controls on load
@@ -124,12 +118,10 @@ function addSpans(){
 	var regex = /\S+/g;
 	while ( i < ps.length ) {
 		var str = ps[i].innerText;
-		// var createContainer = document.createElement('div');
 		var result = str.replace(regex, function(a) {
 			return "<span>" + a + "</span>";
 		});
 		ps[i].innerHTML = result;
-		// ps[i].appendChild(createContainer);
 		ps[i].classList.add('p' + i);
 		i++;
 	}
@@ -154,6 +146,12 @@ function updateTimerDisplay(){
 		i++;
 	}
 
+	var i = 0;
+	while( i < visuals.length) {
+		visTimes(i,visuals[i],t);
+		i++;
+	}
+
 	if ( t < 142) {
 		setTimeout(() => {
 			updateTimerDisplay();
@@ -161,6 +159,18 @@ function updateTimerDisplay(){
 	}
 
 }
+
+// reveal image at the given seconds
+function visTimes(num,visualStarts,curT) {
+	var curVisual = document.querySelector('.visual' + num);
+	if( curT > visualStarts && !curVisual.classList.contains('showImg')) {
+		curVisual.classList.add('showImg');
+	}
+	if( curT < visualStarts && curVisual.classList.contains('showImg')) {
+		curVisual.classList.remove('showImg');
+	}
+}
+
 function pTimes(num,startT,endT,curT) {
 	var curP = document.querySelector('.p' + num);
 	if(curT > endT && !curP.classList.contains('off')) {
@@ -171,8 +181,9 @@ function pTimes(num,startT,endT,curT) {
 	}
 	if( curT > startT && !curP.classList.contains('on')) {
 		curP.classList.add('on');
+		// scroll to the current panel to give focus
 		curP.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-	}
+		}
 	if( curT < startT && curP.classList.contains('on')) {
 		curP.classList.remove('on');
 	}
