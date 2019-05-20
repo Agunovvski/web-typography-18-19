@@ -52,13 +52,6 @@ p {
 	/* margin: 1rem; */
 }
 
-.thanos {
-	color: #6F3C89;
-}
-
-.tony {
-	color: #AA0505;
-}
 
 .container{
 	display: flex;
@@ -78,7 +71,8 @@ p {
 #closed-captions p {
 	opacity: 0;
 	transition: .05s;
-  margin: auto;
+  /* margin: auto; */
+	padding: 1rem;
 }
 #closed-captions .on {
 	opacity: 1;
@@ -92,7 +86,7 @@ p {
 
 
 
-
+/* give container postion in the GRID */
 
 #closed-captions .p-container:nth-child(1) {
 	grid-column-start: 1;
@@ -103,7 +97,7 @@ p {
 
 #closed-captions .p-container:nth-child(2) {
 	grid-column-start: 3;
-	grid-column-end: 5;
+	grid-column-end: 6;
 	grid-row-start: 1;
 	grid-row-end: 1;
 }
@@ -113,6 +107,7 @@ p {
 	grid-column-end: 7;
 	grid-row-start: 1;
 	grid-row-end: 1;
+	margin-top: 2rem;
 }
 
 #closed-captions .p-container:nth-child(4) {
@@ -148,6 +143,7 @@ p {
 	grid-column-end: 6;
 	grid-row-start: 4;
 	grid-row-end: 4;
+	height: 100px;
 }
 
 #closed-captions .p-container:nth-child(9) {
@@ -179,8 +175,8 @@ p {
 }
 
 #closed-captions .p-container:nth-child(13) {
-	grid-column-start: 4;
-	grid-column-end: 5;
+	grid-column-start: 2;
+	grid-column-end: 6;
 	grid-row-start: 9;
 	grid-row-end: 9;
 }
@@ -190,6 +186,7 @@ p {
 	grid-column-end: 7;
 	grid-row-start: 9;
 	grid-row-end: 9;
+	margin-top: 5rem;
 }
 
 #closed-captions .p-container:nth-child(15) {
@@ -204,6 +201,7 @@ p {
 	grid-column-end: 4;
 	grid-row-start: 11;
 	grid-row-end: 11;
+	margin-top: -12rem;
 }
 
 #closed-captions .p-container:nth-child(17) {
@@ -211,89 +209,28 @@ p {
 	grid-column-end: 7;
 	grid-row-start: 11;
 	grid-row-end: 11;
+	margin-top: -10rem;
+}
+
+/* styles for the P's */
+
+.p-container p {
+	color: white;
+	opacity: 0.85;
+	margin-top: -1rem;
+	margin-left: 1rem;
+}
+
+.p-container p.thanos {
+	background-color: #845ec2;
+}
+
+.p-container p.tony {
+	background-color: #d23927;
 }
 
 
-.p-container p:first-of-type {
-	background-color: white;
-}
-
-/* #closed-captions .p-container p:nth-child(1)::before {
-	background-size: cover;
-	background-position: center;
-  display: inline-block;
-  width: 100%;
-  height: 275px;
-  content:"";
-} */
-
-/* #closed-captions p span {
-	display: block;
-} */
-/* #closed-captions .p-container p{
-	padding: 1rem;
-	position: absolute;
-} */
-
-
-
- /* #closed-captions .p-container:nth-child(1) p:nth-child(1)::before {
-	background-image: url('./stills/still1.png');
-} */
-
-/* #closed-captions .p-container:nth-child(2) p:nth-child(1)::before {
- background-image: url('./stills/still2.png');
-}
-
-#closed-captions .p-container:nth-child(3) p:nth-child(1)::before {
- background-image: url('./stills/still3.png');
-}
-
-#closed-captions .p-container:nth-child(4) p:nth-child(1)::before {
- background-image: url('./stills/still4.png');
-}
-
-#closed-captions .p-container:nth-child(5) p:nth-child(1)::before {
- background-image: url('./stills/still3.png');
-}
-
-#closed-captions .p-container:nth-child(9) p:nth-child(1)::before {
- background-image: url('./stills/still28.png');
-}
-
-#closed-captions .p-container:nth-child(10) p:nth-child(1)::before {
- background-image: url('./stills/still29.png');
-}
-
-#closed-captions .p-container:nth-child(11) p:nth-child(1)::before {
- background-image: url('./stills/still30.png');
-}
-
-#closed-captions .p-container:nth-child(13) p:nth-child(1)::before {
- background-image: url('./stills/still58.png');
-}
-
-#closed-captions .p-container:nth-child(14) p:nth-child(1)::before {
- background-image: url('./stills/still60.png');
-}
-
-#closed-captions .p-container:nth-child(15) p:nth-child(1)::before {
- background-image: url('./stills/still65.png');
- background-attachment: fixed;
-}
-
-#closed-captions .p-container:nth-child(16) p:nth-child(1)::before {
- background-image: url('./stills/still64.png');
-}
-
-#closed-captions .p-container:nth-child(17) p:nth-child(1)::before {
- background-image: url('./stills/still66.png'); */
-/* } */
-
-/* .visual {
-	opacity: 0;
-	transition: .05s;
-} */
+/* DIV general style and transition */
 
 #closed-captions .p-container div.showImg {
 	opacity: 1;
@@ -358,15 +295,50 @@ p {
 #closed-captions .p-container:nth-child(15) div {
  background-image: url('./stills/still65.png');
  /* background-attachment: fixed; */
+ height: 350px;
 }
 
 #closed-captions .p-container:nth-child(16) div {
  background-image: url('./stills/still64.png');
+ width: 90%;
+ align-self: center;
 }
 
 #closed-captions .p-container:nth-child(17) div {
  background-image: url('./stills/still66.png');
+ width: 95%;
+ align-self: center;
 }
+
+
+/* general p container style */
+
+.p-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.p0 {
+}
+
+				/* right align */
+.p1, .p2, .p3, .p4, .p6, .p9 {
+	align-self: flex-end;
+	margin-right: 1rem;
+}
+
+
+.p5 {
+	align-self: center;
+	margin-top: -3rem;
+}
+
+
+
+
+
+
 
 
 .voice1 {
@@ -383,12 +355,9 @@ You probably want to change the styling.
 ********************************************** */
 
 span {
-	margin: 1rem .1rem;
+	margin: 0 .1rem;
 }
 
-span:first-of-type {
-	margin-left: 1rem;
-}
 
 
 

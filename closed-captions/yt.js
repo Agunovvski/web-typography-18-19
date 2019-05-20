@@ -96,12 +96,14 @@ function onYouTubeIframeAPIReady() {
 function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.ENDED) {
 			player2.playVideo();
+			document.querySelector('#video-placeholder-2').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 	}
 }
 
 function onPlayerStateChange2(event) {
     if (event.data == YT.PlayerState.ENDED) {
         player3.playVideo();
+				document.querySelector('#video-placeholder-3').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
    	}
 }
 
@@ -165,6 +167,8 @@ function visTimes(num,visualStarts,curT) {
 	var curVisual = document.querySelector('.visual' + num);
 	if( curT > visualStarts && !curVisual.classList.contains('showImg')) {
 		curVisual.classList.add('showImg');
+		// scroll to the current DIV to give focus
+		curVisual.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 	}
 	if( curT < visualStarts && curVisual.classList.contains('showImg')) {
 		curVisual.classList.remove('showImg');
@@ -181,8 +185,8 @@ function pTimes(num,startT,endT,curT) {
 	}
 	if( curT > startT && !curP.classList.contains('on')) {
 		curP.classList.add('on');
-		// scroll to the current panel to give focus
-		curP.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+		// scroll to the current P to give focus
+		// curP.scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 		}
 	if( curT < startT && curP.classList.contains('on')) {
 		curP.classList.remove('on');
