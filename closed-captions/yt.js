@@ -1,5 +1,5 @@
 var player;
-var hiddenPlayer;
+// var hiddenPlayer;
 var player2;
 var player3;
 
@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
 		width: 560,
 		height: 315,
-		videoId: 'osSJhXruEzU',
+		videoId: '8TwXURLQ_pY',
 		playerVars: {
 			color: 'white',
 			// controls: 0,
@@ -25,31 +25,31 @@ function onYouTubeIframeAPIReady() {
 			// onStateChange: onPlayerStateChange
 		}
 	});
-	hiddenPlayer = new YT.Player('video-placeholder-hidden', {
-		width: 560,
-		height: 315,
-		videoId: 'osSJhXruEzU',
-		playerVars: {
-			color: 'white',
-			// controls: 0,
-			iv_load_policy: 3,
-			rel: 0,
-			modestbranding: 1,
-			autoplay: '1',
-			mute: 1,
-			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
-			start: 0,
-			end: 18
-		},
-		events: {
-			onReady: initialize,
-			onStateChange: onPlayerStateChange
-		}
-	});
+	// hiddenPlayer = new YT.Player('video-placeholder-hidden', {
+	// 	width: 560,
+	// 	height: 315,
+	// 	videoId: '8TwXURLQ_pY',
+	// 	playerVars: {
+	// 		color: 'white',
+	// 		// controls: 0,
+	// 		iv_load_policy: 3,
+	// 		rel: 0,
+	// 		modestbranding: 1,
+	// 		autoplay: '1',
+	// 		mute: 1,
+	// 		//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
+	// 		start: 0,
+	// 		end: 117
+	// 	},
+	// 	events: {
+	// 		onReady: initialize
+	// 		// onStateChange: onPlayerStateChange
+	// 	}
+	// });
 	player2 = new YT.Player('video-placeholder-2', {
 		width: 560,
 		height: 315,
-		videoId: 'osSJhXruEzU',
+		videoId: '8TwXURLQ_pY',
 		playerVars: {
 			color: 'white',
 			// controls: 0,
@@ -57,20 +57,20 @@ function onYouTubeIframeAPIReady() {
 			rel: 0,
 			modestbranding: 1,
 			mute: 1,
-			// autoplay: '1',
+			autoplay: '1',
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
-			start: 18,
-			end: 46
+			start: 0,
+			end: 117
 		},
 		events: {
-			onReady: initialize,
-			onStateChange: onPlayerStateChange2
+			onReady: initialize
+			// onStateChange: onPlayerStateChange2
 		}
 	});
 	player3 = new YT.Player('video-placeholder-3', {
 		width: 560,
 		height: 315,
-		videoId: 'osSJhXruEzU',
+		videoId: '8TwXURLQ_pY',
 		playerVars: {
 			color: 'white',
 			// controls: 0,
@@ -78,14 +78,13 @@ function onYouTubeIframeAPIReady() {
 			rel: 0,
 			modestbranding: 1,
 			mute: 1,
-			// autoplay: '1',
+			autoplay: '1',
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
-			start: 54,
-			end: 82
+			start: 0,
+			end: 117
 		},
 		events: {
-			onReady: initialize,
-
+			onReady: initialize
 		}
 	});
 }
@@ -93,19 +92,19 @@ function onYouTubeIframeAPIReady() {
 
 
 
-function onPlayerStateChange(event) {
-	if (event.data == YT.PlayerState.ENDED) {
-			player2.playVideo();
-			document.querySelector('#video-placeholder-2').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-	}
-}
+// function onPlayerStateChange(event) {
+// 	if (event.data == YT.PlayerState.ENDED) {
+// 			player2.playVideo();
+// 			document.querySelector('#video-placeholder-2').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+// 	}
+// }
 
-function onPlayerStateChange2(event) {
-    if (event.data == YT.PlayerState.ENDED) {
-        player3.playVideo();
-				document.querySelector('#video-placeholder-3').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-   	}
-}
+// function onPlayerStateChange2(event) {
+//     if (event.data == YT.PlayerState.ENDED) {
+//         player3.playVideo();
+// 				document.querySelector('#video-placeholder-3').scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+//    	}
+// }
 
 
 
@@ -154,6 +153,12 @@ function updateTimerDisplay(){
 		i++;
 	}
 
+	var i = 0;
+	while (i < vids.length) {
+		videosTimes(i, vids[i], t);
+		i++;
+	}
+
 	if ( t < 142) {
 		setTimeout(() => {
 			updateTimerDisplay();
@@ -161,6 +166,24 @@ function updateTimerDisplay(){
 	}
 
 }
+
+
+
+// reveal video at the given seconds
+function videosTimes(num, videoStarts, curT) {
+	var videoClass = document.querySelector('.video-container' + num);
+	if (curT > videoStarts && !videoClass.classList.contains('reveal')) {
+		videoClass.classList.add('reveal');
+		// scroll to the current DIV to give focus
+		videoClass.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+	}
+	if (curT < videoStarts && videoClass.classList.contains('reveal')) {
+		videoClass.classList.remove('reveal');
+	}
+}
+
+
+
 
 // reveal image at the given seconds
 function visTimes(num,visualStarts,curT) {
