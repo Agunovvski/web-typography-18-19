@@ -1,7 +1,7 @@
 // Hier kan je tijden toevoegen in secondes
 // Op die mommenten komt er een class op de body.
 sounds = [
-	5.5,
+	4.32,
 	9,
 	12,
 	15,
