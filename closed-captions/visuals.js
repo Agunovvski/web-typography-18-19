@@ -1,5 +1,5 @@
-// Hier kan je tijden toevoegen in secondes
-// Op die mommenten komt er een class op de body.
+// Hier kan je afbeeldingen toevoegen in secondes
+// Op die mommenten komt er een class op de div.
 visuals = [
 	4.32,
 	8.34,
