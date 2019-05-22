@@ -365,15 +365,19 @@ p {
 }
 
 .p-container:nth-child(7) .p7 {
-	margin-left: -15rem;
+	margin-left: -20rem;
 	z-index: 2;
+	background: none;
+	margin-top: 5rem;
 }
 
 
-.p8 {
+ .p-container:nth-child(8) .p8 {
 	font-weight: 600;
 	font-style: italic;
 	font-size: 4rem;
+	z-index: 2;
+	margin-top: -12rem;
 }
 
  .p9, .p12, .p13, .p16, .p18 {
@@ -869,19 +873,26 @@ span {
 
 .p12 span {
 	opacity: 0;
-	margin: 0 .2rem;
+	margin: 0 -.1rem;
 }
 .p12.on span:first-of-type {
 	opacity: 1;
 	transition: 0s .2s;
+	font-size: 5rem;
 }
 .p12.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s .7s;
+	font-size: 4rem;
 }
 .p12.on span:nth-of-type(3) {
 	opacity: 1;
 	transition: 0s 1.2s;
+}
+.p12.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-size: 2rem;
 }
 
 .p13 span {
@@ -944,6 +955,93 @@ span {
 	animation: heartBounce 1s both;
 }
 
+.sound1 #video-placeholder-2 {
+	animation: shake1 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.sound2 #video-placeholder-2 {
+	animation: shake2 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.sound3 #video-placeholder-2 {
+	animation: shake3 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.sound4 #video-placeholder-2 {
+	animation: shake4 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.sound5 #video-placeholder-2 {
+	animation: shake5 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+.sound7 #video-placeholder-2 {
+	animation: shake6 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.sound6 #video-placeholder-2 {
+animation: glow 6s ease alternate;
+}
+
+/* player 3 */
+
+.sound8 #video-placeholder-3 {
+	animation: shake7 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.sound9 #video-placeholder-3 {
+	animation: smash 4s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.sound10 #video-placeholder-3 {
+	animation: shake8 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+/* .sound11 #video-placeholder-3 {
+	animation: focusThanos 1s ease-out forwards;
+} */
+
+.sound12 #video-placeholder-3 {
+	animation: glow2 9s ease alternate;
+}
+
+.sound13 #video-placeholder-3 {
+	animation: shake9 0.82s cubic-bezier(.36, .07, .19, .97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+.sound14 #video-placeholder-3 {
+	animation: weaker 6s ease forwards;
+}
+
+body.sound15 {
+	animation: blood 4s ease forwards;
+} 
+
 .reveal {
 	animation: reveal 2s ease forwards;
 }
@@ -983,6 +1081,340 @@ span {
 
 }
 
+@keyframes shake1 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake2 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+
+@keyframes shake3 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake4 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake5 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake6 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake7 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake8 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+@keyframes shake9 {
+
+	10%,
+	90% {
+		transform: translate3d(-1px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(2px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-4px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(4px, 0, 0);
+	}
+}
+
+
+@keyframes smash {
+
+	10%,
+	90% {
+		transform: translate3d(-5px, 0, 0);
+	}
+
+	20%,
+	80% {
+		transform: translate3d(5px, 0, 0);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	40%,
+	60% {
+		transform: translate3d(10px, 0, 0);
+	}
+}
+
+/* @keyframes focusThanos {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
+} */
+
+@keyframes glow {
+
+	/* brain inspiration */
+	0% {
+		-moz-box-shadow: 0px 0px 0px 0px rgba(111, 61, 168, 1);
+		box-shadow: 0px 0px 0px 0px rgba(111, 61, 168, 1);
+	}
+
+
+	40% {
+		-moz-box-shadow: 0px 0px 26px 10px rgba(111, 61, 168, 1);
+		box-shadow: 0px 0px 26px 10px rgba(111, 61, 168, 1);
+	}
+
+	60% {
+		-moz-box-shadow: 0px 0px 40px 20px rgba(111, 61, 168, 1);
+		box-shadow: 0px 0px 40px 20px rgba(111, 61, 168, 1);
+	}
+
+	/* 80% {
+		-moz-box-shadow: 0px 0px 60px 20px rgba(111, 61, 168, 1);
+		box-shadow: 0px 0px 60px 20px rgba(111, 61, 168, 1);
+	} */
+
+	100% {
+		-moz-box-shadow: 0px 0px 0px 0px rgba(111, 61, 168, 1);
+		box-shadow: 0px 0px 0px 0px rgba(111, 61, 168, 1);
+	}
+
+}
+
+@keyframes glow2 {
+
+	/* brain inspiration */
+	0% {
+		-moz-box-shadow: 0px 0px 0px 0px rgba(201, 165, 65, 1);
+		box-shadow: 0px 0px 0px 0px rgba(201, 165, 65, 1);
+	}
+
+
+	40% {
+		-moz-box-shadow: 0px 0px 26px 10px rgba(201, 165, 65, 1);
+		box-shadow: 0px 0px 26px 10px rgba(201, 165, 65, 1);
+	}
+
+	60% {
+		-moz-box-shadow: 0px 0px 40px 20px rgba(201, 165, 65, 1);
+		box-shadow: 0px 0px 40px 20px rgba(201, 165, 65, 1);
+	}
+
+	95% {
+		-moz-box-shadow: 0px 0px 45px 22px rgba(201, 165, 65, 1);
+		box-shadow: 0px 0px 45px 2px rgba(201, 165, 65, 1);
+	}
+
+	100% {
+		-moz-box-shadow: 0px 0px 0px 0px rgba(201, 165, 65, 1);
+		box-shadow: 0px 0px 0px 0px rgba(201, 165, 65, 1);
+	}
+
+}
+
+@keyframes weaker {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(.6);
+	}
+}
+
+@keyframes blood {
+	from {
+		background-color: black;
+	}
+	to {
+		background-color: #660000;
+	}
+}
+
 /* end panels */
 
 .moon {
@@ -1004,6 +1436,7 @@ span {
 
 #video-placeholder-2, #video-placeholder-3 {
 	width: 100%;
+	hei
 	/* opacity: 0; */
 }
 
@@ -1021,3 +1454,23 @@ span {
 
 /* end */
 
+
+/* tablet*/
+
+@media (min-width: 480px) and (max-width: 1024px) {
+
+
+
+}
+
+
+
+/* mobile */
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+
+
+
+}
