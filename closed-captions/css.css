@@ -32,6 +32,7 @@ p {
 	flex-wrap: wrap;
 	justify-content: flex-start;
 	align-items: baseline;
+	margin-left: .5rem;
 }
 
 .panels {
@@ -195,7 +196,7 @@ p {
 	grid-column-end: 4;
 	grid-row-start: 11;
 	grid-row-end: 11;
-	margin-top: -12rem;
+	/* margin-top: -12rem; */
 }
 
 #closed-captions .p-container:nth-child(17) {
@@ -203,7 +204,7 @@ p {
 	grid-column-end: 7;
 	grid-row-start: 11;
 	grid-row-end: 11;
-	margin-top: -10rem;
+	margin-top: 1rem;
 }
 
 
@@ -233,6 +234,7 @@ p {
 #closed-captions .p-container:nth-child(1) div {
 	background-image: url('./stills/still1.png');
 	box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+	z-index: 0;
 }
 
 #closed-captions .p-container:nth-child(2) div {
@@ -319,11 +321,22 @@ p {
 				/* right align */
 .p1, .p2, .p3, .p4, .p6, .p9 {
 	align-self: flex-end;
-	margin-right: 1rem;
+	margin-right: .5rem;
 }
+
+.p-container:first-of-type .p0 {
+	margin-top: -20rem;
+	z-index: 2
+}
+
 
 .p0 {
 	font-style: italic;
+}
+
+.p-container:first-of-type .p1 {
+	margin-top: 15rem;
+	z-index: 2;
 }
 
 
@@ -331,12 +344,17 @@ p {
 	font-weight: 600;
 	font-style: italic;
 	margin-left: 1rem;
+	font-family: 'Brenner Mono'
+}
+
+.p-container:nth-child(4) .p4 {
+	margin-top: -15rem;
 }
 
 
-.p5 {
+.p-container:nth-child(4) .p5 {
 	align-self: center;
-	margin-top: -3rem;
+	margin-top: 10rem;
 	margin-left: 0;
 	/* margin-right: 1rem; */
 }
@@ -346,11 +364,41 @@ p {
 	margin-left: 1rem;
 }
 
+.p-container:nth-child(7) .p7 {
+	margin-left: -15rem;
+	z-index: 2;
+}
+
+
 .p8 {
 	font-weight: 600;
 	font-style: italic;
 	font-size: 4rem;
 }
+
+ .p9, .p12, .p13, .p16, .p18 {
+	font-weight: 800;
+	font-size: 3rem;
+}
+
+.p-container:nth-child(15) .p14 {
+	margin-top: -20rem;
+}
+
+.p-container:nth-child(15) .p15 {
+	margin-top: 7rem;
+}
+
+.p-container:nth-child(17) .p17 {
+	margin-top: -20rem;
+	margin-left: -.5rem;
+}
+
+.p-container:nth-child(17) .p18 {
+	margin-top: 15rem;
+	align-self: flex-end;
+}
+
 
 
 
@@ -547,6 +595,8 @@ span {
 	font-size: 1.2rem;
 	text-transform: uppercase;
 	font-weight: 400;
+	font-family: 'Brenner';
+	margin: 0 .5rem;
 }
 .p5.on span:nth-of-type(8) {
 	opacity: 1;
@@ -588,16 +638,33 @@ span {
 
 .p7 span {
 	opacity: 0;
+	font-style: italic;
 }
 .p7.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	font-style: italic;
+	margin-right: .5rem;
 }
 .p7.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s .1s;
 	font-weight: 600;
+	font-size: 3rem;
+	margin: 0 -.1rem;
+	/* margin-right: -.25em; */
+}
+.p7.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .2s;
+	font-weight: 600;
+	font-size: 2rem;
+	margin: 0 -.1rem;
+}
+.p7.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s .3s;
+	font-weight: 600;
+	margin: 0 -.1rem;
 	/* margin-right: -.25em; */
 }
 
@@ -695,7 +762,10 @@ span {
 .p14.on span:nth-of-type(5) {
 	opacity: 1;
 	transition: 0s .4s;
+	font-weight: 600;
 	font-style: italic;
+	font-family: 'Brenner Mono';
+	margin-left: .5rem;
 }
 
 .p15 span {
@@ -776,7 +846,97 @@ span {
 	font-size: 1.2rem;
 	font-style: italic;
 }
- 
+
+
+
+.p9 span {
+	opacity: 0;
+	margin: 0 .2rem;
+}
+.p9.on span:first-of-type {
+	opacity: 1;
+	transition: 0s .2s;
+}
+.p9.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .7s;
+}
+.p9.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 1.2s;
+}
+
+
+.p12 span {
+	opacity: 0;
+	margin: 0 .2rem;
+}
+.p12.on span:first-of-type {
+	opacity: 1;
+	transition: 0s .2s;
+}
+.p12.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .7s;
+}
+.p12.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 1.2s;
+}
+
+.p13 span {
+	opacity: 0;
+	margin: 0 .2rem;
+}
+.p13.on span:first-of-type {
+	opacity: 1;
+	transition: 0s .2s;
+}
+.p13.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .7s;
+}
+.p13.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 1.2s;
+}
+
+.p16 span {
+	opacity: 0;
+	margin: 0 .2rem;
+}
+.p16.on span:first-of-type {
+	opacity: 1;
+	transition: 0s .2s;
+}
+.p16.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .7s;
+}
+.p16.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 1.2s;
+}
+
+.p18 span {
+	opacity: 0;
+	margin: 0 .2rem;
+}
+.p18.on span:first-of-type {
+	opacity: 1;
+	transition: 0s .2s;
+	font-size: 4rem;
+}
+.p18.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s 1.2s;
+	font-size: 3rem;
+}
+.p18.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s 3.1s;
+	font-size: 2rem;
+}
 
 /* keyframes */
 
