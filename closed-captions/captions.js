@@ -9,13 +9,13 @@ captions[5] = ['13.08','15.26'];
 // My only curse is you.
 captions[6] = ['16.68','18.12'];
 captions[7] = ['20.3','21.3'];
-captions[8] = ['23', '24'];
+captions[8] = ['22.7', '24'];
 captions[9] = ['47','48.5'];
 captions[10] = ['49.4','51.98'];
 captions[11] = ['52','53'];
 // [grunts]
-captions[12] = ['78.86','79.86'];
-captions[13] = ['84.34','85.34'];
+captions[12] = ['81.5','82.5'];
+captions[13] = ['86','87'];
 captions[14] = ['96.2','97.32'];
 // When I'm done, half of humanity will still be alive.
 captions[15] = ['99.12','102.24'];

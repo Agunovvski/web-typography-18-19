@@ -25,27 +25,6 @@ function onYouTubeIframeAPIReady() {
 			// onStateChange: onPlayerStateChange
 		}
 	});
-	// hiddenPlayer = new YT.Player('video-placeholder-hidden', {
-	// 	width: 560,
-	// 	height: 315,
-	// 	videoId: '8TwXURLQ_pY',
-	// 	playerVars: {
-	// 		color: 'white',
-	// 		// controls: 0,
-	// 		iv_load_policy: 3,
-	// 		rel: 0,
-	// 		modestbranding: 1,
-	// 		autoplay: '1',
-	// 		mute: 1,
-	// 		//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
-	// 		start: 0,
-	// 		end: 117
-	// 	},
-	// 	events: {
-	// 		onReady: initialize
-	// 		// onStateChange: onPlayerStateChange
-	// 	}
-	// });
 	player2 = new YT.Player('video-placeholder-2', {
 		width: 560,
 		height: 315,
