@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
 	player = new YT.Player('video-placeholder', {
 		width: 560,
 		height: 315,
-		videoId: '8TwXURLQ_pY',
+		videoId: 'osSJhXruEzU',
 		playerVars: {
 			color: 'white',
 			// controls: 0,
@@ -28,7 +28,7 @@ function onYouTubeIframeAPIReady() {
 	player2 = new YT.Player('video-placeholder-2', {
 		width: 560,
 		height: 315,
-		videoId: '8TwXURLQ_pY',
+		videoId: 'osSJhXruEzU',
 		playerVars: {
 			color: 'white',
 			// controls: 0,
@@ -49,7 +49,7 @@ function onYouTubeIframeAPIReady() {
 	player3 = new YT.Player('video-placeholder-3', {
 		width: 560,
 		height: 315,
-		videoId: '8TwXURLQ_pY',
+		videoId: 'osSJhXruEzU',
 		playerVars: {
 			color: 'white',
 			// controls: 0,
