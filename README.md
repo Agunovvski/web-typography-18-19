@@ -1,6 +1,4 @@
----
-permalink: /index.html
----
+
 
 
 # WEB TYPOGRAPHY, 2018/2019 by Agung Tarumampen
